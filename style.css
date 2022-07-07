@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --black:#161A1D;
+    --blue:#00AAFF;
+    --silver:#D1D5DB;
+    --white:#fff;
+}
+@media (prefers-color-scheme:dark){
+    :root{
+        --black:#161A1D;
+        --blue:;#00AAFF;
+        --silver:#D1D5DB;
+        --white:#fff;
+    }
+}
+@media (prefers-color-scheme:light){
+    :root{
+        --black: #fff;
+        --blue: #00AAFF;
+        --silver: #D1D5DB;
+        --white: #000;
+    }
+}
+body{
+    height: 100%;
+    width: 100vw;
+}
+.head{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    border-radius: 0 0 10px 10px;
+}
+.head .nav{
+    height: 8vh;
+    width: 96%;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--black);
+}
+.head h1{
+    margin: 1vh auto;
+    font-size: 3rem;
+    color: var(--blue);
+}
+.head p{
+    margin:1vh auto;
+    color: var(--silver);
+}
+.head p:before{
+    content: open-quote;
+    color: var(--black);
+    margin-inline:2px;
+}
+.head p:after{
+    content: close-quote;
+    color: var(--black);
+    margin-inline: 2px;
+}
+.main{
+    height: 100%;
+    width: 90vw;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.search{
+    height: 3rem;
+    width: 90%;
+    margin:2rem auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+#search{
+    height: 100%;
+    width:calc(100% - 3rem);
+    padding: 15px;
+    background-color: var(--clr-4);
+    border: none;
+    border-right: 1px solid var(--black);
+    font-size: 1.5em;
+    border-radius: 10px 0 0 10px;
+}
+.material-symbols-outlined {
+    font-size: 3em;
+    width: 3rem;
+    margin:auto;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 4;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+.content{
+    margin-top: 5vh;
+    width: 100vw;
+}
+.thumbnail{
+    width: 100vw;
+}
+.tags{
+    display: flex;
+    flex-grow: 1;
+    width: max-content;
+    background-color: red;
+}
+.tag{
+    width: max-content;
+    padding: 10px;
+    margin: 5px;
+    background-color: var(--clr-4);
+    border: 2px solid var(--clr-2);
+    text-transform: uppercase;
+    border-radius: 5px;
+}
